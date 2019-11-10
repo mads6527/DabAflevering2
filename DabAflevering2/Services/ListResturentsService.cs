@@ -20,6 +20,7 @@ namespace DabAflevering2.Services
             _resturentContext = resturentContext;
         }
 
+
         public IEnumerable<Resturent> GetAllResturentsWithAverageRating()
         {
             var viewmodel = _resturentContext.Resturent
@@ -30,7 +31,7 @@ namespace DabAflevering2.Services
             return viewmodel;
         }
 
-        public Resturent GetMenuForResturent(int? id)
+        public  Resturent GetMenuForResturent(int? id)
         {
             if (id == null)
             {
@@ -38,12 +39,24 @@ namespace DabAflevering2.Services
             }
 
             var view = _resturentContext.Resturent
+                .Where(r => r.ResturentId == id)
                 .Include(r => r.ResturentDishes)
                     .ThenInclude(r => r.Dish)
                         .ThenInclude(r => r.Review)
-                .Single(r => r.ResturentId == id);
+                .FirstOrDefault();
 
             return view;
+        }
+
+        public IEnumerable<Guest> GuestsReviews()
+        {
+            var view = _resturentContext.Guest
+                .Include(r => r.Table)
+                    .ThenInclude(r => r.Resturent)
+                .Include(r => r.Review)
+                .ToList();
+
+            return null;
         }
     }
 }

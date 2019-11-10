@@ -12,5 +12,7 @@ namespace DabAflevering2.Services
         IEnumerable<Resturent> GetAllResturentsWithAverageRating();
 
         Resturent GetMenuForResturent(int? id);
+
+        IEnumerable<Guest> GuestsReviews();
     }
 }

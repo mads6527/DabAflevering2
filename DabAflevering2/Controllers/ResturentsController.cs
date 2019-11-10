@@ -31,17 +31,24 @@ namespace DabAflevering2.Controllers
             return View(viewmodel);
         }
 
-        public ResturentMenu Menu(int? id)
+        public IActionResult Menu(int? id)
         {
-            if(id == null)
-            {
-                NotFound();
-            }
-
             var viewmodel = new ResturentMenu();
             viewmodel.Menu = _Repo.GetMenuForResturent(id);
 
-            return viewmodel;
+            if(viewmodel.Menu == null)
+            {
+                return Content("Angive Resturent med Id i URL");
+            }
+
+            return View(viewmodel);
+        }
+
+        public IActionResult GuestReview()
+        {
+
+
+            return View();
         }
 
         // GET: Resturents/Details/5
