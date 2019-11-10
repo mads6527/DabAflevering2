@@ -51,6 +51,17 @@ namespace DabAflevering2.Models
                 .HasOne(tw => tw.Table)
                 .WithMany(t => t.TableWaiters)
                 .HasForeignKey(tw => tw.TableId);
+
+            modelBuilder.Entity<Person>().HasData(
+                new {PersonId = 1, Name = "Mads Jørgensen"},
+                new {PersonId = 2, Name = "Andreas Elgaard Sørensen"},
+                new {PersonId = 3, Name = "Mark Højer" },
+                new {PersonId = 4, Name = "Mathias Jørgensen" });
+            modelBuilder.Entity<Dish>().HasData(
+                new {DishId = 1, Price = 44, Type = "Spaghetti Carbonara"},
+                new {DishId = 2, Price = 39, Type = "Spaghetti Bolognese"},
+                new {DishId = 3, Price = 55, Type = "Lasagna"},
+                new {DishId = 4, Price = 60, Type = "Spaghetti ala Casa"}); 
         }
 
         public DbSet<Dish> Dish { get; set; }
