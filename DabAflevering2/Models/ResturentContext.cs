@@ -58,10 +58,10 @@ namespace DabAflevering2.Models
                 new {PersonId = 3, Name = "Mark Højer" },
                 new {PersonId = 4, Name = "Mathias Jørgensen" });
             modelBuilder.Entity<Dish>().HasData(
-                new {DishId = 1, Price = 44, Type = "Spaghetti Carbonara"},
-                new {DishId = 2, Price = 39, Type = "Spaghetti Bolognese"},
-                new {DishId = 3, Price = 55, Type = "Lasagna"},
-                new {DishId = 4, Price = 60, Type = "Spaghetti ala Casa"}); 
+                new {DishId = 1, Price = 44.0, Type = "Spaghetti Carbonara", ReviewId = 1},
+                new {DishId = 2, Price = 39.0, Type = "Spaghetti Bolognese", ReviewId = 2},
+                new {DishId = 3, Price = 55.0, Type = "Lasagna", ReviewId = 3},
+                new {DishId = 4, Price = 60.0, Type = "Spaghetti ala Casa", ReviewId = 4}); 
         }
 
         public DbSet<Dish> Dish { get; set; }
