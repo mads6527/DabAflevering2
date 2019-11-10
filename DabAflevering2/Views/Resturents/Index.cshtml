@@ -42,19 +42,21 @@
             <td>
                 @item.Type
             </td>
+            <td>
             @foreach (var variant in item.Reviews)
             {
                 average += variant.Stars;
 
                 @if (count < 5)
                 {
-                    <td>
-                        @Html.Raw(variant.Text + "<br>")
-                    </td>
+                    
+                        @Html.Raw(variant.Text) <br/>
+                    
                     count++;
                     
                 }
             }
+            </td>
             <td>
                 @if (item.Reviews.Count != 0)
                 {
@@ -64,6 +66,8 @@
 
         </tr>
         }
+    
+    
     </tbody>
 </table>
 

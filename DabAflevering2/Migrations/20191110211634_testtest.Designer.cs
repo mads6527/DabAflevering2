@@ -4,14 +4,16 @@ using DabAflevering2.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    partial class ResturentContextModelSnapshot : ModelSnapshot
+    [Migration("20191110211634_testtest")]
+    partial class testtest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,15 +38,6 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ReviewId");
 
                     b.ToTable("Dish");
-
-                    b.HasData(
-                        new
-                        {
-                            DishId = 1,
-                            Price = 44.0,
-                            ReviewId = 1,
-                            Type = "Spaghetti Carbonara"
-                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.GuestDishes", b =>
@@ -156,22 +149,6 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ResturentId");
 
                     b.ToTable("Review");
-
-                    b.HasData(
-                        new
-                        {
-                            ReviewId = 1,
-                            ResturentId = 1,
-                            Stars = 2,
-                            Text = "Godt sted"
-                        },
-                        new
-                        {
-                            ReviewId = 2,
-                            ResturentId = 1,
-                            Stars = 3,
-                            Text = "lorte lort"
-                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Table", b =>

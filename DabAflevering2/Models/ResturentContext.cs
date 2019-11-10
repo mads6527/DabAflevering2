@@ -58,10 +58,18 @@ namespace DabAflevering2.Models
                 new {PersonId = 3, Name = "Mark Højer" },
                 new {PersonId = 4, Name = "Mathias Jørgensen" });
             modelBuilder.Entity<Dish>().HasData(
-                new {DishId = 1, Price = 44.0, Type = "Spaghetti Carbonara", ReviewId = 1},
-                new {DishId = 2, Price = 39.0, Type = "Spaghetti Bolognese", ReviewId = 2},
-                new {DishId = 3, Price = 55.0, Type = "Lasagna", ReviewId = 3},
-                new {DishId = 4, Price = 60.0, Type = "Spaghetti ala Casa", ReviewId = 4}); 
+            new {DishId = 1, Price = 44.0, Type = "Spaghetti Carbonara", ReviewId = 1});
+            //    new {DishId = 2, Price = 39.0, Type = "Spaghetti Bolognese", ReviewId = 2},
+            //    new {DishId = 3, Price = 55.0, Type = "Lasagna", ReviewId = 3},
+            //    new {DishId = 4, Price = 60.0, Type = "Spaghetti ala Casa", ReviewId = 4});
+
+            modelBuilder.Entity<Review>().HasData(
+                new {ReviewId = 1, Stars = 2, Text = "Godt sted", ResturentId = 1},
+                new {ReviewId = 2, Stars = 3, Text = "lorte lort", ResturentId = 1}
+                );
+
+            modelBuilder.Entity<Resturent>().HasData(
+                new {ResturentId = 1, Type = "buffet", Name = "Jerrys", Address = "fiskergade"});
         }
 
         public DbSet<Dish> Dish { get; set; }

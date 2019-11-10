@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    [Migration("20191107132929_firt dat")]
-    partial class firtdat
+    [Migration("20191110212236_test3")]
+    partial class test3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,15 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ReviewId");
 
                     b.ToTable("Dish");
+
+                    b.HasData(
+                        new
+                        {
+                            DishId = 1,
+                            Price = 44.0,
+                            ReviewId = 1,
+                            Type = "Spaghetti Carbonara"
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.GuestDishes", b =>
@@ -69,6 +78,28 @@ namespace DabAflevering2.Migrations
                     b.ToTable("Person");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Person");
+
+                    b.HasData(
+                        new
+                        {
+                            PersonId = 1,
+                            Name = "Mads Jørgensen"
+                        },
+                        new
+                        {
+                            PersonId = 2,
+                            Name = "Andreas Elgaard Sørensen"
+                        },
+                        new
+                        {
+                            PersonId = 3,
+                            Name = "Mark Højer"
+                        },
+                        new
+                        {
+                            PersonId = 4,
+                            Name = "Mathias Jørgensen"
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Resturent", b =>
@@ -86,6 +117,15 @@ namespace DabAflevering2.Migrations
                     b.HasKey("ResturentId");
 
                     b.ToTable("Resturent");
+
+                    b.HasData(
+                        new
+                        {
+                            ResturentId = 1,
+                            Address = "fiskergade",
+                            Name = "Jerrys",
+                            Type = "buffet"
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.ResturentDishes", b =>
@@ -122,10 +162,10 @@ namespace DabAflevering2.Migrations
                     b.HasData(
                         new
                         {
-                            ReviewId = 9,
-                            ResturentId = 7,
-                            Stars = 1,
-                            Text = "Mads Jørgensen"
+                            ReviewId = 1,
+                            ResturentId = 1,
+                            Stars = 2,
+                            Text = "Godt sted"
                         });
                 });
 
