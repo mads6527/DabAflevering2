@@ -43,7 +43,7 @@ namespace DabAflevering2
                 .GetConnectionString("DefaultConnection");
 
             services.AddDbContext<ResturentContext>(options =>
-            options.UseSqlServer("Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True"));
+            options.UseSqlServer("Data Source=ANDREAS-LAPTOP;Initial Catalog=DAB2;Integrated Security=True"));
 
             services.AddScoped<IListResturentsService, ListResturentsService>();
         }

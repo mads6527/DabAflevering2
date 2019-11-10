@@ -27,7 +27,7 @@
 
   "DataLayer": {
     "ConnectionStrings": {
-      "DefaultConnection": "Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True"
+      "DefaultConnection": "Data Source=LAPTOP-21UILE1G\\MSSQLSERVER2;Initial Catalog=DAB2;Integrated Security=True"
     }
   }
 }
