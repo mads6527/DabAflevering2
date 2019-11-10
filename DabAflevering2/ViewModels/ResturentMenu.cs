@@ -8,6 +8,6 @@ namespace DabAflevering2.ViewModels
 {
     public class ResturentMenu
     {
-        public Resturent Resturent { get; set; }
+        public Resturent Menu { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace DabAflevering2.Controllers
             return View(viewmodel);
         }
 
-        public IActionResult Menu(int? id)
+        public ResturentMenu Menu(int? id)
         {
             if(id == null)
             {
@@ -39,9 +39,9 @@ namespace DabAflevering2.Controllers
             }
 
             var viewmodel = new ResturentMenu();
-            viewmodel.Resturent = _Repo.GetMenuForResturent(id);
+            viewmodel.Menu = _Repo.GetMenuForResturent(id);
 
-            return View(viewmodel);
+            return viewmodel;
         }
 
         // GET: Resturents/Details/5
