@@ -4,14 +4,16 @@ using DabAflevering2.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    partial class ResturentContextModelSnapshot : ModelSnapshot
+    [Migration("20191110215730_testestest")]
+    partial class testestest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,48 +46,6 @@ namespace DabAflevering2.Migrations
                             Price = 44.0,
                             ReviewId = 1,
                             Type = "Spaghetti Carbonara"
-                        },
-                        new
-                        {
-                            DishId = 2,
-                            Price = 75.0,
-                            ReviewId = 2,
-                            Type = "Pizza med rejer"
-                        },
-                        new
-                        {
-                            DishId = 3,
-                            Price = 65.0,
-                            ReviewId = 6,
-                            Type = "Pizza Peperoni"
-                        },
-                        new
-                        {
-                            DishId = 4,
-                            Price = 70.0,
-                            ReviewId = 7,
-                            Type = "Pizza Meatlover"
-                        },
-                        new
-                        {
-                            DishId = 5,
-                            Price = 60.0,
-                            ReviewId = 4,
-                            Type = "Butter Chicken"
-                        },
-                        new
-                        {
-                            DishId = 6,
-                            Price = 30.0,
-                            ReviewId = 5,
-                            Type = "Naan Brød med smør"
-                        },
-                        new
-                        {
-                            DishId = 7,
-                            Price = 40.0,
-                            ReviewId = 10,
-                            Type = "Tandoori Chicken - Spicy!"
                         });
                 });
 
@@ -165,13 +125,6 @@ namespace DabAflevering2.Migrations
                             Address = "fiskergade",
                             Name = "Jerrys",
                             Type = "buffet"
-                        },
-                        new
-                        {
-                            ResturentId = 2,
-                            Address = "Nørreallé 87, 8000",
-                            Name = "South India",
-                            Type = "Indisk"
                         });
                 });
 
@@ -186,43 +139,6 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ResturentId");
 
                     b.ToTable("ResturentDishes");
-
-                    b.HasData(
-                        new
-                        {
-                            DishId = 1,
-                            ResturentId = 1
-                        },
-                        new
-                        {
-                            DishId = 2,
-                            ResturentId = 1
-                        },
-                        new
-                        {
-                            DishId = 3,
-                            ResturentId = 1
-                        },
-                        new
-                        {
-                            DishId = 4,
-                            ResturentId = 1
-                        },
-                        new
-                        {
-                            DishId = 5,
-                            ResturentId = 2
-                        },
-                        new
-                        {
-                            DishId = 6,
-                            ResturentId = 2
-                        },
-                        new
-                        {
-                            DishId = 7,
-                            ResturentId = 2
-                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Review", b =>
@@ -257,62 +173,6 @@ namespace DabAflevering2.Migrations
                             ResturentId = 1,
                             Stars = 3,
                             Text = "lorte lort"
-                        },
-                        new
-                        {
-                            ReviewId = 3,
-                            ResturentId = 1,
-                            Stars = 2,
-                            Text = "Tyndskid nejtak"
-                        },
-                        new
-                        {
-                            ReviewId = 4,
-                            ResturentId = 2,
-                            Stars = 2,
-                            Text = "Okay, men ikke godt "
-                        },
-                        new
-                        {
-                            ReviewId = 5,
-                            ResturentId = 2,
-                            Stars = 1,
-                            Text = "Kommer aldrig her igen"
-                        },
-                        new
-                        {
-                            ReviewId = 6,
-                            ResturentId = 1,
-                            Stars = 3,
-                            Text = "Fint til pengene."
-                        },
-                        new
-                        {
-                            ReviewId = 7,
-                            ResturentId = 1,
-                            Stars = 4,
-                            Text = "Mit lokale stamsted!"
-                        },
-                        new
-                        {
-                            ReviewId = 8,
-                            ResturentId = 1,
-                            Stars = 3,
-                            Text = "Kommer her ofte!"
-                        },
-                        new
-                        {
-                            ReviewId = 9,
-                            ResturentId = 1,
-                            Stars = 1,
-                            Text = "Nej nej nej"
-                        },
-                        new
-                        {
-                            ReviewId = 10,
-                            ResturentId = 2,
-                            Stars = 5,
-                            Text = "Så lækkert!"
                         });
                 });
 

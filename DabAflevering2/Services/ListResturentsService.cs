@@ -53,10 +53,12 @@ namespace DabAflevering2.Services
             var view = _resturentContext.Guest
                 .Include(r => r.Table)
                     .ThenInclude(r => r.Resturent)
+                .ThenInclude(r=>r.Reviews)
                 .Include(r => r.Review)
+                
                 .ToList();
 
-            return null;
+            return view;
         }
     }
 }
