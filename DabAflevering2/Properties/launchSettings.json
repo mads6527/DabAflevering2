@@ -1,9 +1,4 @@
 ﻿{
-  "Data": {
-    "ConnectionStrings": {
-      "DefaultConnection": "Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True"
-    }
-  },
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -27,6 +22,12 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    }
+  },
+
+  "DataLayer": {
+    "ConnectionStrings": {
+      "DefaultConnection": "Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True"
     }
   }
 }
