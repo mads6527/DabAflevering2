@@ -17,7 +17,7 @@ namespace DabAflevering2.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=LAPTOP-21UILE1G\\MSSQLSERVER2;Initial Catalog=DAB2;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
