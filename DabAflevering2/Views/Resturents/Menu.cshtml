@@ -4,7 +4,7 @@
     Layout = "Menu";
 }
 
-<h1>Resturent Menu @Model.Resturent.Name</h1>
+<h1>Resturent Menu @Model.Menu.Name</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -25,37 +25,20 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Resturents)
+        @foreach (var item in Model.Menu.ResturentDishes)
         {
-            int average = 0;
-            int count = 0;
             <tr>
 
                 <td>
-                    @item.Name
+                    @item.Dish.Type
                 </td>
 
                 <td>
-                    @item.Type
+                    @item.Dish.Price
                 </td>
-                @foreach (var variant in item.Reviews)
-                {
-                    average += variant.Stars;
-
-                    @if (count < 5)
-                    {
-                        <td>
-                            @Html.Raw(variant.Text + "<br>")
-                        </td>
-                        count++;
-
-                    }
-                }
+                
                 <td>
-                    @if (item.Reviews.Count != 0)
-                    {
-                        @(average / item.Reviews.Count);
-                    }
+                    @item.Dish.Review.Stars
                 </td>
 
             </tr>
