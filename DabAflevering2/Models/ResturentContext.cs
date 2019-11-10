@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using DabAflevering2.Models;
+using DabAflevering2.ViewModels;
 
 namespace DabAflevering2.Models
 {
@@ -57,19 +58,47 @@ namespace DabAflevering2.Models
                 new {PersonId = 2, Name = "Andreas Elgaard Sørensen"},
                 new {PersonId = 3, Name = "Mark Højer" },
                 new {PersonId = 4, Name = "Mathias Jørgensen" });
-            modelBuilder.Entity<Dish>().HasData(
-            new {DishId = 1, Price = 44.0, Type = "Spaghetti Carbonara", ReviewId = 1});
-            //    new {DishId = 2, Price = 39.0, Type = "Spaghetti Bolognese", ReviewId = 2},
-            //    new {DishId = 3, Price = 55.0, Type = "Lasagna", ReviewId = 3},
-            //    new {DishId = 4, Price = 60.0, Type = "Spaghetti ala Casa", ReviewId = 4});
+
+
+            
 
             modelBuilder.Entity<Review>().HasData(
                 new {ReviewId = 1, Stars = 2, Text = "Godt sted", ResturentId = 1},
-                new {ReviewId = 2, Stars = 3, Text = "lorte lort", ResturentId = 1}
+                new {ReviewId = 2, Stars = 3, Text = "lorte lort", ResturentId = 1},
+                new {ReviewId = 3, Stars = 2, Text = "Tyndskid nejtak", ResturentId = 1},
+                new {ReviewId = 4, Stars = 2, Text ="Okay, men ikke godt ", ResturentId = 2},
+                new {ReviewId = 5, Stars = 1, Text = "Kommer aldrig her igen", ResturentId = 2},
+                new {ReviewId = 6, Stars = 3, Text = "Fint til pengene.", ResturentId=1},
+                new {ReviewId = 7, Stars = 4, Text = "Mit lokale stamsted!", ResturentId = 1},
+                new {ReviewId = 8, Stars = 3, Text = "Kommer her ofte!", ResturentId = 1},
+                new {ReviewId = 9, Stars = 1, Text = "Nej nej nej", ResturentId = 1},
+                new { ReviewId = 10, Stars = 5, Text = "Så lækkert!", ResturentId = 2 }
                 );
 
             modelBuilder.Entity<Resturent>().HasData(
-                new {ResturentId = 1, Type = "buffet", Name = "Jerrys", Address = "fiskergade"});
+                new {ResturentId = 1, Type = "buffet", Name = "Jerrys", Address = "fiskergade"},
+                new {ResturentId= 2, Type = "Indisk", Name = "South India", Address = "Nørreallé 87, 8000"});
+
+            modelBuilder.Entity<Dish>().HasData(
+                new { DishId = 1, Price = 44.0, Type = "Spaghetti Carbonara", ReviewId = 1 },
+                new { DishId = 2, Price = 75.0, Type = "Pizza med rejer", ReviewId = 2 },
+                new { DishId = 3, Price = 65.0, Type = "Pizza Peperoni", ReviewId = 6 },
+                new { DishId = 4, Price = 70.0, Type = "Pizza Meatlover", ReviewId = 7 },
+                new { DishId = 5, Price = 60.0, Type = "Butter Chicken", ReviewId = 4 },
+                new { DishId = 6, Price = 30.0, Type = "Naan Brød med smør", ReviewId = 5 },
+                new { DishId = 7, Price = 40.0, Type = "Tandoori Chicken - Spicy!", ReviewId = 10 }
+            );
+
+            modelBuilder.Entity<ResturentDishes>().HasData(
+                new { ResturentId = 1, DishId = 1 },
+                new { ResturentId = 1, DishId = 2 },
+                new { ResturentId = 1, DishId = 3 },
+                new { ResturentId = 1, DishId = 4 },
+                new { ResturentId = 2, DishId = 5 },
+                new { ResturentId = 2, DishId = 6 },
+                new { ResturentId = 2, DishId = 7 }
+            );
+
         }
 
         public DbSet<Dish> Dish { get; set; }
