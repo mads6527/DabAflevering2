@@ -1,0 +1,54 @@
+﻿@model DabAflevering2.ViewModels.GuestReviews
+@{
+    ViewData["Title"] = "GuestReview";
+}
+
+<h1>Guest Reviews</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Guest
+            </th>
+            <th>
+                Table
+            </th>
+            <th>
+                Review
+            </th>
+
+            <th>
+                Resturent
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Guests)
+        {
+            <tr>
+                
+                <td>
+                    @item.Name
+                </td>
+
+                <td>
+                    @item.Review.Text
+                </td>
+
+                <td>
+                    @item.Table.TableId
+                </td>
+
+                <td>
+                    @item.Table.Resturent.Name
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

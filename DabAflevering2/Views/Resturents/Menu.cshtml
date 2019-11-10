@@ -1,14 +1,13 @@
 ﻿@model DabAflevering2.ViewModels.ResturentMenu
 @{
     ViewData["Title"] = "Menu";
-    Layout = "Menu";
 }
-
 <h1>Resturent Menu @Model.Menu.Name</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 
 <table class="table">
     <thead>
@@ -36,7 +35,7 @@
                 <td>
                     @item.Dish.Price
                 </td>
-                
+
                 <td>
                     @item.Dish.Review.Stars
                 </td>
@@ -45,4 +44,9 @@
         }
     </tbody>
 </table>
+
+
+
+
+
 

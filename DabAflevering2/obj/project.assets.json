@@ -12939,8 +12939,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.2",
       "Microsoft.EntityFrameworkCore.Tools >= 2.2.2",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
-      "System.Linq >= 4.3.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4"
     ]
   },
   "packageFolders": {
@@ -13025,10 +13024,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.4, )"
-          },
-          "System.Linq": {
-            "target": "Package",
-            "version": "[4.3.0, )"
           }
         },
         "imports": [
