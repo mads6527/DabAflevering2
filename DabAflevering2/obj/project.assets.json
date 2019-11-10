@@ -12944,25 +12944,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gamer\\.nuget\\packages\\": {},
+    "C:\\Users\\Mathias\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
+      "projectUniqueName": "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering222\\DabAflevering2\\DabAflevering2.csproj",
       "projectName": "DabAflevering2",
-      "projectPath": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
-      "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\obj\\",
+      "projectPath": "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering222\\DabAflevering2\\DabAflevering2.csproj",
+      "packagesPath": "C:\\Users\\Mathias\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering222\\DabAflevering2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mathias\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

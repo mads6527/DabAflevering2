@@ -68,3 +68,10 @@ C:\Users\Gamer\Desktop\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\Raz
 C:\Users\Gamer\Desktop\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Edit.cshtml.g.cs
 C:\Users\Gamer\Desktop\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Index.cshtml.g.cs
 C:\Users\Gamer\Desktop\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Menu.cshtml.g.cs
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.csprojAssemblyReference.cache
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.RazorAssemblyInfo.cache
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.RazorAssemblyInfo.cs
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.AssemblyInfoInputs.cache
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.AssemblyInfo.cs
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.dll
+C:\Users\Mathias\Source\Repos\DabAflevering222\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.pdb

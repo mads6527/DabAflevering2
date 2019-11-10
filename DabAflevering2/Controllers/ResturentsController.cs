@@ -39,7 +39,7 @@ namespace DabAflevering2.Controllers
             }
 
             var viewmodel = new ResturentMenu();
-            viewmodel.resturents = _Repo.GetMenuForResturent(id);
+            viewmodel.Resturent = _Repo.GetMenuForResturent(id);
 
             return View(viewmodel);
         }
