@@ -61,7 +61,20 @@ namespace DabAflevering2.Models
                 new {DishId = 1, Price = 44.0, Type = "Spaghetti Carbonara", ReviewId = 1},
                 new {DishId = 2, Price = 39.0, Type = "Spaghetti Bolognese", ReviewId = 2},
                 new {DishId = 3, Price = 55.0, Type = "Lasagna", ReviewId = 3},
-                new {DishId = 4, Price = 60.0, Type = "Spaghetti ala Casa", ReviewId = 4}); 
+                new {DishId = 4, Price = 60.0, Type = "Spaghetti ala Casa", ReviewId = 4});
+            modelBuilder.Entity<Resturent>().HasData(
+                new {Name = "South India", Type = "Indisk", Address = "NørreAllé 47, 8000", ResturentId = 1},
+                new {Name = "Burger Boom", Type = "American", Address = "Jægergårdsgade 87, 8000", ResturentId = 2 },
+                new { Type = "Indisk", Name=  "Indian Kitchen", Address = "StreetFood Aarhus, 8000", ResturentId = 3 }
+            );
+
+            modelBuilder.Entity<Review>().HasData(
+                new {Text = "Fin mad, rigtigt dårlig service", Stars = 1, ResturentId = 1, ReviewId = 1},
+                new { Text = "Maden var perfekt, krydret til perfektion. Dog lidt mangler på service", Stars = 4, ResturentId = 2, ReviewId = 2 },
+                new { Text = "Altid godt, men aldrig ekstraordinært", Stars = 3, ResturentId = 3, ReviewId = 3 },
+                new { Text = "Det pureste lort..", Stars = 1, ResturentId = 1, ReviewId = 4 },
+                new { Text = "Okay, men langt fra godt...", Stars = 2, ResturentId = 3, ReviewId = 5 }
+                );
         }
 
         public DbSet<Dish> Dish { get; set; }

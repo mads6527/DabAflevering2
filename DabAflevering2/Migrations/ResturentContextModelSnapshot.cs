@@ -136,6 +136,29 @@ namespace DabAflevering2.Migrations
                     b.HasKey("ResturentId");
 
                     b.ToTable("Resturent");
+
+                    b.HasData(
+                        new
+                        {
+                            ResturentId = 1,
+                            Address = "NørreAllé 47, 8000",
+                            Name = "South India",
+                            Type = "Indisk"
+                        },
+                        new
+                        {
+                            ResturentId = 2,
+                            Address = "Jægergårdsgade 87, 8000",
+                            Name = "Burger Boom",
+                            Type = "American"
+                        },
+                        new
+                        {
+                            ResturentId = 3,
+                            Address = "StreetFood Aarhus, 8000",
+                            Name = "Indian Kitchen",
+                            Type = "Indisk"
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.ResturentDishes", b =>
@@ -168,6 +191,43 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ResturentId");
 
                     b.ToTable("Review");
+
+                    b.HasData(
+                        new
+                        {
+                            ReviewId = 1,
+                            ResturentId = 1,
+                            Stars = 1,
+                            Text = "Fin mad, rigtigt dårlig service"
+                        },
+                        new
+                        {
+                            ReviewId = 2,
+                            ResturentId = 2,
+                            Stars = 4,
+                            Text = "Maden var perfekt, krydret til perfektion. Dog lidt mangler på service"
+                        },
+                        new
+                        {
+                            ReviewId = 3,
+                            ResturentId = 3,
+                            Stars = 3,
+                            Text = "Altid godt, men aldrig ekstraordinært"
+                        },
+                        new
+                        {
+                            ReviewId = 4,
+                            ResturentId = 1,
+                            Stars = 1,
+                            Text = "Det pureste lort.."
+                        },
+                        new
+                        {
+                            ReviewId = 5,
+                            ResturentId = 3,
+                            Stars = 2,
+                            Text = "Okay, men langt fra godt..."
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Table", b =>
