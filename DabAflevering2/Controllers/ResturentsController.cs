@@ -46,9 +46,10 @@ namespace DabAflevering2.Controllers
 
         public IActionResult GuestReview()
         {
+            var viewmodel = new GuestReviews();
+            viewmodel.Guests = _Repo.GuestsReviews();
 
-
-            return View();
+            return View(viewmodel);
         }
 
         // GET: Resturents/Details/5

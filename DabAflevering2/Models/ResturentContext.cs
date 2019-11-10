@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using DabAflevering2.Models;
+using DabAflevering2.ViewModels;
 
 namespace DabAflevering2.Models
 {
@@ -70,6 +71,12 @@ namespace DabAflevering2.Models
 
             modelBuilder.Entity<Resturent>().HasData(
                 new {ResturentId = 1, Type = "buffet", Name = "Jerrys", Address = "fiskergade"});
+
+            modelBuilder.Entity<Guest>().HasData(
+                new { TableId = 1, PersonId = 5});
+
+            modelBuilder.Entity<Table>().HasData(
+                new {TableId = 1, Number = 1, ResturentId = 1});
         }
 
         public DbSet<Dish> Dish { get; set; }

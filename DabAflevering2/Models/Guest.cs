@@ -9,7 +9,7 @@ namespace DabAflevering2.Models
 {
     public class Guest : Person
     {
-        public DateTime Time { get; set; }
+       // public DateTime Time { get; set; }
 
         //Navigation properties
         
@@ -20,5 +20,8 @@ namespace DabAflevering2.Models
         public Review Review { get; set; }
 
         public ICollection<GuestDishes> guestDishes { get; set; }
+
+        [NotMapped]
+        public ICollection<Review> Reviews { get; set; }
     }
 }
