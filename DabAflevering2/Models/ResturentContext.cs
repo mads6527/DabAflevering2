@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,11 +14,6 @@ namespace DabAflevering2.Models
         public ResturentContext(DbContextOptions<ResturentContext> options) : base(options)
         {
 
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=ANDREAS-LAPTOP;Initial Catalog=Assignment2;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -55,13 +51,6 @@ namespace DabAflevering2.Models
                 .HasOne(tw => tw.Table)
                 .WithMany(t => t.TableWaiters)
                 .HasForeignKey(tw => tw.TableId);
-
-            //modelBuilder.Entity<Resturent>().HasData(
-            //    new { ResturentId = 1 , Type = "Dansk", Name = "Jensens", Address = "Aarhus"});
-
-            modelBuilder.Entity<Person>().HasData(
-                new {PersonId = 1, Name = "Mads"});
-
         }
 
         public DbSet<Dish> Dish { get; set; }

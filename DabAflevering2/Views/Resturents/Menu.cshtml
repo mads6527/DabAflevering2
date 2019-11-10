@@ -1,0 +1,48 @@
+﻿@model DabAflevering2.ViewModels.ResturentMenu
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "Menu";
+}
+
+<h1>Resturent Menu @Model.Menu.Name</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Dish
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Menu.ResturentDishes)
+        {
+            <tr>
+
+                <td>
+                    @item.Dish.Type
+                </td>
+
+                <td>
+                    @item.Dish.Price
+                </td>
+                
+                <td>
+                    @item.Dish.Review.Stars
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

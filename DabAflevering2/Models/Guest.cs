@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DabAflevering2.Models
 {
-    public class Guest : Person, IEntity
+    public class Guest : Person
     {
         public DateTime Time { get; set; }
 

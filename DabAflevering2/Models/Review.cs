@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DabAflevering2.Models
 {
-    public class Review : IEntity
+    public class Review 
     {
         //attributes
         public int ReviewId { get; set; }

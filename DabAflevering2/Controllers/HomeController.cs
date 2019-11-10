@@ -10,6 +10,13 @@ namespace DabAflevering2.Controllers
 {
     public class HomeController : Controller
     {
+        private ResturentContext _Contex;
+
+        public HomeController(ResturentContext context)
+        {
+            _Contex = context;
+        }
+
         public IActionResult Index()
         {
             return View();

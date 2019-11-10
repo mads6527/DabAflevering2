@@ -1,0 +1,70 @@
+﻿@model DabAflevering2.ViewModels.ResturentIndexData
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Resturents</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Resturent Name
+            </th>
+            <th>
+                Resturent Type
+            </th>
+            <th>
+                The 5 Latest Reviews
+            </th>
+            <th>
+                Average rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Resturents)
+        {
+            int average = 0;
+            int count = 0;
+        <tr>
+
+            <td>
+                @item.Name
+            </td>
+
+            <td>
+                @item.Type
+            </td>
+            @foreach (var variant in item.Reviews)
+            {
+                average += variant.Stars;
+
+                @if (count < 5)
+                {
+                    <td>
+                        @Html.Raw(variant.Text + "<br>")
+                    </td>
+                    count++;
+                    
+                }
+            }
+            <td>
+                @if (item.Reviews.Count != 0)
+                {
+                    @(average / item.Reviews.Count);
+                }
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+

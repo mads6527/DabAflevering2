@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DabAflevering2.Models
 {
-    public class Table : IEntity
+    public class Table 
     {
         //Attributes
         public int TableId { get; set; }
