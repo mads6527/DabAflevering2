@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {}
+    "C:\\Users\\bella\\source\\repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {
+    "C:\\Users\\bella\\source\\repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
+        "projectUniqueName": "C:\\Users\\bella\\source\\repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
         "projectName": "DabAflevering2",
-        "projectPath": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
-        "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\obj\\",
+        "projectPath": "C:\\Users\\bella\\source\\repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
+        "packagesPath": "C:\\Users\\bella\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bella\\source\\repos\\mads6527\\DabAflevering2\\DabAflevering2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bella\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
