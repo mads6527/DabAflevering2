@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bella\\Source\\Repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {}
+    "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bella\\Source\\Repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {
+    "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bella\\Source\\Repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
+        "projectUniqueName": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
         "projectName": "DabAflevering2",
-        "projectPath": "C:\\Users\\bella\\Source\\Repos\\mads6527\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
-        "packagesPath": "C:\\Users\\bella\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bella\\Source\\Repos\\mads6527\\DabAflevering2\\DabAflevering2\\obj\\",
+        "projectPath": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\DabAflevering2.csproj",
+        "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gamer\\Desktop\\DabAflevering2\\DabAflevering2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bella\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -77,6 +77,14 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

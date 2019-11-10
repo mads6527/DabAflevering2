@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DabAflevering2.Models
 {
-    public class Waiter : Person, IEntity
+    public class Waiter : Person
     {
         public double Salery { get; set; }
 

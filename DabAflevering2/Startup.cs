@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using DabAflevering2.Models;
 using Microsoft.EntityFrameworkCore;
+using DabAflevering2.Services;
 
 namespace DabAflevering2
 {
@@ -33,13 +34,18 @@ namespace DabAflevering2
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ResturentContext>(options =>
-            options.UseSqlServer("Data Source = LAPTOP - 21UILE1G\\MSSQLSERVER2; Initial Catalog = DAB2; Integrated Security = True"));
+            
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddScoped<ResturentContext>();
+            var connection = Configuration
+                .GetConnectionString("DefaultConnection");
+
+            services.AddDbContext<ResturentContext>(options =>
+            options.UseSqlServer("Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True"));
+
+            services.AddScoped<IListResturentsService, ListResturentsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

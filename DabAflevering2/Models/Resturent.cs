@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DabAflevering2.Models
 {
-    public class Resturent : IEntity
+    public class Resturent 
     {
         //Attributes
         public int ResturentId { get; set; }

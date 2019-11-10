@@ -15,11 +15,6 @@ namespace DabAflevering2.Models
 
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=LAPTOP-21UILE1G\\MSSQLSERVER2;Initial Catalog=DAB2;Integrated Security=True");
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<GuestDishes>().HasKey(gd => new { gd.DishId, gd.PersonId });
