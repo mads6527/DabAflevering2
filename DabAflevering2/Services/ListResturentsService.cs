@@ -30,7 +30,7 @@ namespace DabAflevering2.Services
             return viewmodel;
         }
 
-        public IEnumerable<Resturent> GetMenuForResturent(int? id)
+        public Resturent GetMenuForResturent(int? id)
         {
             if (id == null)
             {
@@ -38,11 +38,10 @@ namespace DabAflevering2.Services
             }
 
             var view = _resturentContext.Resturent
-                .Where(r => r.ResturentId == id)
                 .Include(r => r.ResturentDishes)
-                    .ThenInclude(re => re.Dish)
-                        .ThenInclude(d => d.Review)
-                .ToList();
+                    .ThenInclude(r => r.Dish)
+                        .ThenInclude(r => r.Review)
+                .Single(r => r.ResturentId == id);
 
             return view;
         }

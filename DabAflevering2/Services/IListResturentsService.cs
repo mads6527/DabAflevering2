@@ -11,6 +11,6 @@ namespace DabAflevering2.Services
     {
         IEnumerable<Resturent> GetAllResturentsWithAverageRating();
 
-        IEnumerable<Resturent> GetMenuForResturent(int? id);
+        Resturent GetMenuForResturent(int? id);
     }
 }
