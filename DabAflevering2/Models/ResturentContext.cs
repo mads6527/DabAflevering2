@@ -17,7 +17,7 @@ namespace DabAflevering2.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=ANDREAS-LAPTOP;Initial Catalog=Assignment2;Integrated Security=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -55,6 +55,13 @@ namespace DabAflevering2.Models
                 .HasOne(tw => tw.Table)
                 .WithMany(t => t.TableWaiters)
                 .HasForeignKey(tw => tw.TableId);
+
+            //modelBuilder.Entity<Resturent>().HasData(
+            //    new { ResturentId = 1 , Type = "Dansk", Name = "Jensens", Address = "Aarhus"});
+
+            modelBuilder.Entity<Person>().HasData(
+                new {PersonId = 1, Name = "Mads"});
+
         }
 
         public DbSet<Dish> Dish { get; set; }

@@ -34,7 +34,7 @@ namespace DabAflevering2
             });
 
             services.AddDbContext<ResturentContext>(options =>
-            options.UseSqlServer("Data Source=DESKTOP-EPAUQ1G;Initial Catalog=Dab2;Integrated Security=True"));
+            options.UseSqlServer("Data Source=ANDREAS-LAPTOP;Initial Catalog=Assignment2;Integrated Security=True"));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
