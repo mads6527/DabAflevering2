@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    [Migration("20191110212735_NyPis")]
-    partial class NyPis
+    [Migration("20191110212236_test3")]
+    partial class test3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,27 +46,6 @@ namespace DabAflevering2.Migrations
                             Price = 44.0,
                             ReviewId = 1,
                             Type = "Spaghetti Carbonara"
-                        },
-                        new
-                        {
-                            DishId = 2,
-                            Price = 39.0,
-                            ReviewId = 2,
-                            Type = "Spaghetti Bolognese"
-                        },
-                        new
-                        {
-                            DishId = 3,
-                            Price = 55.0,
-                            ReviewId = 3,
-                            Type = "Lasagna"
-                        },
-                        new
-                        {
-                            DishId = 4,
-                            Price = 60.0,
-                            ReviewId = 4,
-                            Type = "Spaghetti ala Casa"
                         });
                 });
 
@@ -143,23 +122,9 @@ namespace DabAflevering2.Migrations
                         new
                         {
                             ResturentId = 1,
-                            Address = "NørreAllé 47, 8000",
-                            Name = "South India",
-                            Type = "Indisk"
-                        },
-                        new
-                        {
-                            ResturentId = 2,
-                            Address = "Jægergårdsgade 87, 8000",
-                            Name = "Burger Boom",
-                            Type = "American"
-                        },
-                        new
-                        {
-                            ResturentId = 3,
-                            Address = "StreetFood Aarhus, 8000",
-                            Name = "Indian Kitchen",
-                            Type = "Indisk"
+                            Address = "fiskergade",
+                            Name = "Jerrys",
+                            Type = "buffet"
                         });
                 });
 
@@ -199,36 +164,8 @@ namespace DabAflevering2.Migrations
                         {
                             ReviewId = 1,
                             ResturentId = 1,
-                            Stars = 1,
-                            Text = "Fin mad, rigtigt dårlig service"
-                        },
-                        new
-                        {
-                            ReviewId = 2,
-                            ResturentId = 2,
-                            Stars = 4,
-                            Text = "Maden var perfekt, krydret til perfektion. Dog lidt mangler på service"
-                        },
-                        new
-                        {
-                            ReviewId = 3,
-                            ResturentId = 3,
-                            Stars = 3,
-                            Text = "Altid godt, men aldrig ekstraordinært"
-                        },
-                        new
-                        {
-                            ReviewId = 4,
-                            ResturentId = 1,
-                            Stars = 1,
-                            Text = "Det pureste lort.."
-                        },
-                        new
-                        {
-                            ReviewId = 5,
-                            ResturentId = 3,
                             Stars = 2,
-                            Text = "Okay, men langt fra godt..."
+                            Text = "Godt sted"
                         });
                 });
 
