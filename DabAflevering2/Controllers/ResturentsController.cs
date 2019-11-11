@@ -44,10 +44,15 @@ namespace DabAflevering2.Controllers
             return View(viewmodel);
         }
 
-        public IActionResult GuestReview()
+        public IActionResult GuestReview(int? id)
         {
             var viewmodel = new GuestReviews();
-            viewmodel.Guests = _Repo.GuestsReviews();
+            viewmodel.guest_reviews = _Repo.GuestsReviews(id);
+
+            if (viewmodel.guest_reviews == null)
+            {
+                return Content("Angiv Et resturant ID, for gæste reviews for den specifikke resturant");
+            }
 
             return View(viewmodel);
         }

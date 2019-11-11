@@ -4,14 +4,16 @@ using DabAflevering2.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    partial class ResturentContextModelSnapshot : ModelSnapshot
+    [Migration("20191111022311_Letsgooo")]
+    partial class Letsgooo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,6 +120,28 @@ namespace DabAflevering2.Migrations
                     b.ToTable("Person");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Person");
+
+                    b.HasData(
+                        new
+                        {
+                            PersonId = 1,
+                            Name = "Mads Jørgensen"
+                        },
+                        new
+                        {
+                            PersonId = 2,
+                            Name = "Andreas Elgaard Sørensen"
+                        },
+                        new
+                        {
+                            PersonId = 3,
+                            Name = "Mark Højer"
+                        },
+                        new
+                        {
+                            PersonId = 4,
+                            Name = "Mathias Jørgensen"
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Resturent", b =>
@@ -234,14 +258,14 @@ namespace DabAflevering2.Migrations
                             ReviewId = 2,
                             ResturentId = 1,
                             Stars = 3,
-                            Text = "Det er okay"
+                            Text = "lorte lort"
                         },
                         new
                         {
                             ReviewId = 3,
                             ResturentId = 1,
                             Stars = 2,
-                            Text = "Kan bstemt ikke anbefale dette"
+                            Text = "Tyndskid nejtak"
                         },
                         new
                         {
@@ -316,30 +340,6 @@ namespace DabAflevering2.Migrations
                             TableId = 1,
                             Number = 1,
                             ResturentId = 1
-                        },
-                        new
-                        {
-                            TableId = 2,
-                            Number = 2,
-                            ResturentId = 1
-                        },
-                        new
-                        {
-                            TableId = 3,
-                            Number = 1,
-                            ResturentId = 2
-                        },
-                        new
-                        {
-                            TableId = 4,
-                            Number = 3,
-                            ResturentId = 1
-                        },
-                        new
-                        {
-                            TableId = 5,
-                            Number = 2,
-                            ResturentId = 2
                         });
                 });
 
@@ -374,37 +374,9 @@ namespace DabAflevering2.Migrations
                         new
                         {
                             PersonId = 5,
-                            Name = "Benjamin",
+                            Name = "Faggot",
                             ReviewId = 1,
                             TableId = 1
-                        },
-                        new
-                        {
-                            PersonId = 6,
-                            Name = "Martin",
-                            ReviewId = 2,
-                            TableId = 2
-                        },
-                        new
-                        {
-                            PersonId = 7,
-                            Name = "Mathias",
-                            ReviewId = 4,
-                            TableId = 3
-                        },
-                        new
-                        {
-                            PersonId = 8,
-                            Name = "Madsemand",
-                            ReviewId = 3,
-                            TableId = 4
-                        },
-                        new
-                        {
-                            PersonId = 9,
-                            Name = "Mark Løjer",
-                            ReviewId = 5,
-                            TableId = 5
                         });
                 });
 

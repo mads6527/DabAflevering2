@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    [Migration("20191110215730_testestest")]
-    partial class testestest
+    [Migration("20191111023842_nu")]
+    partial class nu
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,48 @@ namespace DabAflevering2.Migrations
                             Price = 44.0,
                             ReviewId = 1,
                             Type = "Spaghetti Carbonara"
+                        },
+                        new
+                        {
+                            DishId = 2,
+                            Price = 75.0,
+                            ReviewId = 2,
+                            Type = "Pizza med rejer"
+                        },
+                        new
+                        {
+                            DishId = 3,
+                            Price = 65.0,
+                            ReviewId = 6,
+                            Type = "Pizza Peperoni"
+                        },
+                        new
+                        {
+                            DishId = 4,
+                            Price = 70.0,
+                            ReviewId = 7,
+                            Type = "Pizza Meatlover"
+                        },
+                        new
+                        {
+                            DishId = 5,
+                            Price = 60.0,
+                            ReviewId = 4,
+                            Type = "Butter Chicken"
+                        },
+                        new
+                        {
+                            DishId = 6,
+                            Price = 30.0,
+                            ReviewId = 9,
+                            Type = "Naan Broed med smoer"
+                        },
+                        new
+                        {
+                            DishId = 7,
+                            Price = 40.0,
+                            ReviewId = 10,
+                            Type = "Tandoori Chicken - Spicy!"
                         });
                 });
 
@@ -78,28 +120,6 @@ namespace DabAflevering2.Migrations
                     b.ToTable("Person");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Person");
-
-                    b.HasData(
-                        new
-                        {
-                            PersonId = 1,
-                            Name = "Mads Jørgensen"
-                        },
-                        new
-                        {
-                            PersonId = 2,
-                            Name = "Andreas Elgaard Sørensen"
-                        },
-                        new
-                        {
-                            PersonId = 3,
-                            Name = "Mark Højer"
-                        },
-                        new
-                        {
-                            PersonId = 4,
-                            Name = "Mathias Jørgensen"
-                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Resturent", b =>
@@ -125,6 +145,13 @@ namespace DabAflevering2.Migrations
                             Address = "fiskergade",
                             Name = "Jerrys",
                             Type = "buffet"
+                        },
+                        new
+                        {
+                            ResturentId = 2,
+                            Address = "Nørreallé 87, 8000",
+                            Name = "South India",
+                            Type = "Indisk"
                         });
                 });
 
@@ -139,6 +166,43 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ResturentId");
 
                     b.ToTable("ResturentDishes");
+
+                    b.HasData(
+                        new
+                        {
+                            DishId = 1,
+                            ResturentId = 1
+                        },
+                        new
+                        {
+                            DishId = 2,
+                            ResturentId = 1
+                        },
+                        new
+                        {
+                            DishId = 3,
+                            ResturentId = 1
+                        },
+                        new
+                        {
+                            DishId = 4,
+                            ResturentId = 1
+                        },
+                        new
+                        {
+                            DishId = 5,
+                            ResturentId = 2
+                        },
+                        new
+                        {
+                            DishId = 6,
+                            ResturentId = 2
+                        },
+                        new
+                        {
+                            DishId = 7,
+                            ResturentId = 2
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Review", b =>
@@ -172,7 +236,63 @@ namespace DabAflevering2.Migrations
                             ReviewId = 2,
                             ResturentId = 1,
                             Stars = 3,
-                            Text = "lorte lort"
+                            Text = "Det er okay"
+                        },
+                        new
+                        {
+                            ReviewId = 3,
+                            ResturentId = 1,
+                            Stars = 2,
+                            Text = "Kan bstemt ikke anbefale dette"
+                        },
+                        new
+                        {
+                            ReviewId = 4,
+                            ResturentId = 2,
+                            Stars = 2,
+                            Text = "Okay, men ikke godt "
+                        },
+                        new
+                        {
+                            ReviewId = 5,
+                            ResturentId = 2,
+                            Stars = 1,
+                            Text = "Kommer aldrig her igen"
+                        },
+                        new
+                        {
+                            ReviewId = 6,
+                            ResturentId = 1,
+                            Stars = 3,
+                            Text = "Fint til pengene."
+                        },
+                        new
+                        {
+                            ReviewId = 7,
+                            ResturentId = 1,
+                            Stars = 4,
+                            Text = "Mit lokale stamsted!"
+                        },
+                        new
+                        {
+                            ReviewId = 8,
+                            ResturentId = 1,
+                            Stars = 3,
+                            Text = "Kommer her ofte!"
+                        },
+                        new
+                        {
+                            ReviewId = 9,
+                            ResturentId = 2,
+                            Stars = 1,
+                            Text = "Nej nej nej"
+                        },
+                        new
+                        {
+                            ReviewId = 10,
+                            ResturentId = 2,
+                            Stars = 5,
+                            Text = "Så lækkert!"
                         });
                 });
 
@@ -198,6 +318,30 @@ namespace DabAflevering2.Migrations
                             TableId = 1,
                             Number = 1,
                             ResturentId = 1
+                        },
+                        new
+                        {
+                            TableId = 2,
+                            Number = 2,
+                            ResturentId = 1
+                        },
+                        new
+                        {
+                            TableId = 3,
+                            Number = 1,
+                            ResturentId = 2
+                        },
+                        new
+                        {
+                            TableId = 4,
+                            Number = 3,
+                            ResturentId = 1
+                        },
+                        new
+                        {
+                            TableId = 5,
+                            Number = 2,
+                            ResturentId = 2
                         });
                 });
 
@@ -232,7 +376,37 @@ namespace DabAflevering2.Migrations
                         new
                         {
                             PersonId = 5,
+                            Name = "Benjamin",
+                            ReviewId = 1,
                             TableId = 1
+                        },
+                        new
+                        {
+                            PersonId = 6,
+                            Name = "Martin",
+                            ReviewId = 2,
+                            TableId = 2
+                        },
+                        new
+                        {
+                            PersonId = 7,
+                            Name = "Mathias",
+                            ReviewId = 4,
+                            TableId = 3
+                        },
+                        new
+                        {
+                            PersonId = 8,
+                            Name = "Madsemand",
+                            ReviewId = 3,
+                            TableId = 4
+                        },
+                        new
+                        {
+                            PersonId = 9,
+                            Name = "Mark Løjer",
+                            ReviewId = 5,
+                            TableId = 5
                         });
                 });
 

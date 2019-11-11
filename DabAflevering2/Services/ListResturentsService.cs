@@ -48,14 +48,20 @@ namespace DabAflevering2.Services
             return view;
         }
 
-        public IEnumerable<Guest> GuestsReviews()
+        public IEnumerable<Guest> GuestsReviews(int? id)
         {
+            if (id == null)
+            {
+                return null;
+            }
+
             var view = _resturentContext.Guest
+                .Where(r => r.Table.ResturentId == id)
                 .Include(r => r.Table)
-                    .ThenInclude(r => r.Resturent)
-                .ThenInclude(r=>r.Reviews)
+                .ThenInclude(r => r.Resturent)
+                .ThenInclude(r => r.Reviews)
+                .Include(r => r.guestDishes)
                 .Include(r => r.Review)
-                
                 .ToList();
 
             return view;

@@ -20,6 +20,12 @@
     <Compile Remove="Migrations\20191110210236_test.Designer.cs" />
     <Compile Remove="Migrations\20191110223902_ny.cs" />
     <Compile Remove="Migrations\20191110223902_ny.Designer.cs" />
+    <Compile Remove="Migrations\20191111002424_nydatabasenymig.cs" />
+    <Compile Remove="Migrations\20191111002424_nydatabasenymig.Designer.cs" />
+    <Compile Remove="Migrations\20191111002938_nu.cs" />
+    <Compile Remove="Migrations\20191111002938_nu.Designer.cs" />
+    <Compile Remove="Migrations\20191111031318_nynynynyny.cs" />
+    <Compile Remove="Migrations\20191111031318_nynynynyny.Designer.cs" />
   </ItemGroup>
 
 

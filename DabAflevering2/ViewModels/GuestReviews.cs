@@ -8,6 +8,6 @@ namespace DabAflevering2.ViewModels
 {
     public class GuestReviews
     {
-        public IEnumerable<Guest> Guests { get; set; }
+        public IEnumerable<Guest> guest_reviews { get; set; }
     }
 }

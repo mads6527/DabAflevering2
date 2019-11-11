@@ -19,6 +19,7 @@ namespace DabAflevering2.Models
         public int? ReviewId { get; set; }
         public Review Review { get; set; }
 
+
         public ICollection<GuestDishes> guestDishes { get; set; }
 
         [NotMapped]

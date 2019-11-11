@@ -3,49 +3,56 @@
     ViewData["Title"] = "GuestReview";
 }
 
-<h1>Guest Reviews</h1>
+<h1>Guest Reviews @Model.guest_reviews.First().Table.Resturent.Name</h1>
 
 
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                Guest
-            </th>
-            <th>
-                Table
-            </th>
-            <th>
-                Review
-            </th>
+    <tr>
+        <th>
+            Guest
+        </th>
+        <th>
+            Table
+        </th>
+        <th>
+            Dish
+        </th>
 
-            <th>
-                Resturent
-            </th>
-        </tr>
+        <th>
+            Review
+        </th>
+        <th>
+            Rating
+        </th>
+    </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Guests)
+        @foreach (var item in Model.guest_reviews)
         {
             int count = 0;
             <tr>
                 
+
                 <td>
                     @item.Name
                 </td>
-                
+
                 <td>
-                    @item.Table.TableId
-                    
+                    @item.Table.Number
+
                 </td>
 
                 <td>
                     <!-- du kan godt skrive item.Review så viser den review ID men den fatter ikke at få texten.. prøvede at gøre som i Index.html filen men det virkede ikke-->
-                    @item.Review.Text
+                    
                 </td>
 
                 <td>
-                    @item.Table.Resturent.Name
+                    @item.Review.Text
+                </td>
+                <td>
+                    @item.Review.Stars
                 </td>
 
             </tr>

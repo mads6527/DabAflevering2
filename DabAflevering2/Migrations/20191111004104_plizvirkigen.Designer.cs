@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    [Migration("20191110225202_VirkerDetMon")]
-    partial class VirkerDetMon
+    [Migration("20191111004104_plizvirkigen")]
+    partial class plizvirkigen
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,13 +77,6 @@ namespace DabAflevering2.Migrations
                         },
                         new
                         {
-                            DishId = 6,
-                            Price = 30.0,
-                            ReviewId = 5,
-                            Type = "Naan Brød med smør"
-                        },
-                        new
-                        {
                             DishId = 7,
                             Price = 40.0,
                             ReviewId = 10,
@@ -102,6 +95,13 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("PersonId");
 
                     b.ToTable("GuestDishes");
+
+                    b.HasData(
+                        new
+                        {
+                            DishId = 1,
+                            PersonId = 5
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.Person", b =>
@@ -141,6 +141,11 @@ namespace DabAflevering2.Migrations
                         {
                             PersonId = 4,
                             Name = "Mathias Jørgensen"
+                        },
+                        new
+                        {
+                            PersonId = 5,
+                            Name = "Sure skidsen"
                         });
                 });
 
@@ -213,11 +218,6 @@ namespace DabAflevering2.Migrations
                         new
                         {
                             DishId = 5,
-                            ResturentId = 2
-                        },
-                        new
-                        {
-                            DishId = 6,
                             ResturentId = 2
                         },
                         new
@@ -305,7 +305,7 @@ namespace DabAflevering2.Migrations
                         new
                         {
                             ReviewId = 9,
-                            ResturentId = 1,
+                            ResturentId = 2,
                             Stars = 1,
                             Text = "Nej nej nej"
                         },
@@ -333,6 +333,14 @@ namespace DabAflevering2.Migrations
                     b.HasIndex("ResturentId");
 
                     b.ToTable("Table");
+
+                    b.HasData(
+                        new
+                        {
+                            TableId = 1,
+                            Number = 1,
+                            ResturentId = 1
+                        });
                 });
 
             modelBuilder.Entity("DabAflevering2.Models.TableWaiters", b =>
@@ -355,8 +363,6 @@ namespace DabAflevering2.Migrations
                     b.Property<int?>("ReviewId");
 
                     b.Property<int>("TableId");
-
-                    b.Property<DateTime>("Time");
 
                     b.HasIndex("ReviewId");
 

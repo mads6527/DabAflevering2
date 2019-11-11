@@ -13,6 +13,6 @@ namespace DabAflevering2.Services
 
         Resturent GetMenuForResturent(int? id);
 
-        IEnumerable<Guest> GuestsReviews();
+        IEnumerable<Guest> GuestsReviews(int? id);
     }
 }
