@@ -6,10 +6,6 @@
 
 <h1>Resturents</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
 
 <table class="table">
     <thead>
@@ -32,7 +28,7 @@
         @foreach (var item in Model.Resturents)
         {
             int average = 0;
-            int count = 0;
+            int count = 1;
         <tr>
 
             <td>
@@ -47,10 +43,10 @@
             {
                 average += variant.Stars;
 
-                @if (count < 5)
+                @if (count < 6)
                 {
                     
-                        @Html.Raw(variant.Text) <br/>
+                        @Html.Raw(count + ":" + variant.Text)  <br/>
                     
                     count++;
                     

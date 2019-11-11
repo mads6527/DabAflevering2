@@ -85,10 +85,6 @@ C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp
 C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.TagHelpers.input.cache
 C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.TagHelpers.output.cache
 C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.RazorCoreGenerate.cache
-C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Create.cshtml.g.cs
-C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Delete.cshtml.g.cs
-C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Details.cshtml.g.cs
-C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Edit.cshtml.g.cs
 C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\GuestReview.cshtml.g.cs
 C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Index.cshtml.g.cs
 C:\Users\Mathias\Source\Repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Menu.cshtml.g.cs

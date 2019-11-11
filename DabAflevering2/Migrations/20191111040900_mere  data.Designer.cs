@@ -4,14 +4,16 @@ using DabAflevering2.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DabAflevering2.Migrations
 {
     [DbContext(typeof(ResturentContext))]
-    partial class ResturentContextModelSnapshot : ModelSnapshot
+    [Migration("20191111040900_mere  data")]
+    partial class meredata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -494,78 +496,6 @@ namespace DabAflevering2.Migrations
                             TableId = 5,
                             Number = 2,
                             ResturentId = 2
-                        },
-                        new
-                        {
-                            TableId = 6,
-                            Number = 5,
-                            ResturentId = 3
-                        },
-                        new
-                        {
-                            TableId = 7,
-                            Number = 3,
-                            ResturentId = 3
-                        },
-                        new
-                        {
-                            TableId = 8,
-                            Number = 1,
-                            ResturentId = 4
-                        },
-                        new
-                        {
-                            TableId = 9,
-                            Number = 10,
-                            ResturentId = 4
-                        },
-                        new
-                        {
-                            TableId = 10,
-                            Number = 8,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 11,
-                            Number = 1,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 12,
-                            Number = 2,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 13,
-                            Number = 3,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 14,
-                            Number = 5,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 15,
-                            Number = 1,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 16,
-                            Number = 3,
-                            ResturentId = 5
-                        },
-                        new
-                        {
-                            TableId = 17,
-                            Number = 2,
-                            ResturentId = 5
                         });
                 });
 
@@ -628,93 +558,9 @@ namespace DabAflevering2.Migrations
                         new
                         {
                             PersonId = 9,
-                            Name = "Mark",
+                            Name = "Mark Løjer",
                             ReviewId = 5,
                             TableId = 5
-                        },
-                        new
-                        {
-                            PersonId = 10,
-                            Name = "Line",
-                            ReviewId = 6,
-                            TableId = 6
-                        },
-                        new
-                        {
-                            PersonId = 11,
-                            Name = "Henrik",
-                            ReviewId = 7,
-                            TableId = 7
-                        },
-                        new
-                        {
-                            PersonId = 12,
-                            Name = "Søren",
-                            ReviewId = 8,
-                            TableId = 8
-                        },
-                        new
-                        {
-                            PersonId = 13,
-                            Name = "Laura",
-                            ReviewId = 9,
-                            TableId = 9
-                        },
-                        new
-                        {
-                            PersonId = 14,
-                            Name = "Julie",
-                            ReviewId = 10,
-                            TableId = 10
-                        },
-                        new
-                        {
-                            PersonId = 15,
-                            Name = "Frands",
-                            ReviewId = 11,
-                            TableId = 11
-                        },
-                        new
-                        {
-                            PersonId = 16,
-                            Name = "Simon",
-                            ReviewId = 12,
-                            TableId = 12
-                        },
-                        new
-                        {
-                            PersonId = 17,
-                            Name = "Thorsten",
-                            ReviewId = 13,
-                            TableId = 13
-                        },
-                        new
-                        {
-                            PersonId = 18,
-                            Name = "Jørgen",
-                            ReviewId = 14,
-                            TableId = 14
-                        },
-                        new
-                        {
-                            PersonId = 19,
-                            Name = "Ida",
-                            ReviewId = 15,
-                            TableId = 15
-                        },
-                        new
-                        {
-                            PersonId = 20,
-                            Name = "Preben",
-                            ReviewId = 16,
-                            TableId = 16
-                        },
-                        new
-                        {
-                            PersonId = 21,
-                            Name = "Jens",
-                            ReviewId = 17,
-                            TableId = 17
                         });
                 });
 

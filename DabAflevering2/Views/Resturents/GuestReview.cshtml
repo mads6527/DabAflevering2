@@ -44,8 +44,12 @@
                 </td>
 
                 <td>
-                    <!-- du kan godt skrive item.Review så viser den review ID men den fatter ikke at få texten.. prøvede at gøre som i Index.html filen men det virkede ikke-->
+                    @foreach (var variant in item.guestDishes)
+                    {
+                        @Html.Raw(variant.Dish) <br/>
+                    }
                     
+
                 </td>
 
                 <td>

@@ -43,7 +43,7 @@ namespace DabAflevering2
                 .GetConnectionString("DefaultConnection");
 
             services.AddDbContext<ResturentContext>(options =>
-            options.UseSqlServer("Data Source=laptop-21uile1g\\mssqlserver2;Initial Catalog=DAB2-14;Integrated Security=True"));
+            options.UseSqlServer("Data Source=DESKTOP-MQAL8LJ\\MINSERVER;Initial Catalog=DAB4;Integrated Security=True")); //  <--Skriv jeres egen connection string her!!
 
             services.AddScoped<IListResturentsService, ListResturentsService>();
         }
