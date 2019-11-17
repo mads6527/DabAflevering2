@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj": {}
+    "C:\\Users\\Mathias\\source\\repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj": {
+    "C:\\Users\\Mathias\\source\\repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias\\source\\repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj",
         "projectName": "DabAflevering2",
-        "projectPath": "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj",
+        "projectPath": "C:\\Users\\Mathias\\source\\repos\\DabAflevering4\\DabAflevering2\\DabAflevering2.csproj",
         "packagesPath": "C:\\Users\\Mathias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mathias\\Source\\Repos\\DabAflevering4\\DabAflevering2\\obj\\",
+        "outputPath": "C:\\Users\\Mathias\\source\\repos\\DabAflevering4\\DabAflevering2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

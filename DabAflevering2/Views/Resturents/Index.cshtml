@@ -4,6 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
+
+<p>
+    <a asp-action="CreateResturent">Create New Resturent</a>
+</p>
+<p>
+    <a asp-action="CreateReview">Create New Review</a>
+</p>
 <h1>Resturents</h1>
 
 
@@ -11,10 +18,13 @@
     <thead>
         <tr>
             <th>
-               Resturent Name
+                Resturent Name
             </th>
             <th>
                 Resturent Type
+            </th>
+            <th>
+                ReviewId
             </th>
             <th>
                 The 5 Latest Reviews
@@ -22,6 +32,7 @@
             <th>
                 Average rating
             </th>
+
         </tr>
     </thead>
     <tbody>
@@ -39,19 +50,22 @@
                 @item.Type
             </td>
             <td>
-            @foreach (var variant in item.Reviews)
-            {
-                average += variant.Stars;
-
-                @if (count < 6)
+                @item.ResturentId
+            </td>
+            <td>
+                @foreach (var variant in item.Reviews)
                 {
-                    
-                        @Html.Raw(count + ":" + variant.Text)  <br/>
-                    
-                    count++;
-                    
+                    average += variant.Stars;
+
+                    @if (count < 6)
+                    {
+
+                        @Html.Raw(count + ":" + variant.Text) <br />
+
+                        count++;
+
+                    }
                 }
-            }
             </td>
             <td>
                 @if (item.Reviews.Count != 0)
@@ -59,7 +73,9 @@
                     @(average / item.Reviews.Count);
                 }
             </td>
-
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.ResturentId">Delete</a>
+            </td>
         </tr>
         }
     

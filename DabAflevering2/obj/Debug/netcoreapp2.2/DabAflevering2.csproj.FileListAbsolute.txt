@@ -137,3 +137,6 @@ C:\Users\bella\source\repos\mads6527\DabAflevering2\DabAflevering2\obj\Debug\net
 C:\Users\bella\source\repos\mads6527\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.dll
 C:\Users\bella\source\repos\mads6527\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.pdb
 C:\Users\bella\source\repos\mads6527\DabAflevering2\DabAflevering2\obj\Debug\netcoreapp2.2\DabAflevering2.csproj.CopyComplete
+C:\Users\Mathias\source\repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\CreateResturent.cshtml.g.cs
+C:\Users\Mathias\source\repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\Delete.cshtml.g.cs
+C:\Users\Mathias\source\repos\DabAflevering4\DabAflevering2\obj\Debug\netcoreapp2.2\Razor\Views\Resturents\CreateReview.cshtml.g.cs
