@@ -62,7 +62,7 @@ namespace DabAflevering2.Controllers
 
 
         
-        // GET: Resturents1/Create
+        
         public IActionResult CreateResturent()
         {
             return View();
@@ -124,7 +124,7 @@ namespace DabAflevering2.Controllers
             return View(resturent);
         }
 
-        // POST: Resturents1/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
